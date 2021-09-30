@@ -3,6 +3,7 @@ package controller
 import (
 	"net/http"
 
+	errorhandel "github.com/dinhuy9595/shop/domain/common/errorHandle"
 	"github.com/dinhuy9595/shop/domain/model"
 	"github.com/dinhuy9595/shop/usercases/interactor"
 )
@@ -36,5 +37,5 @@ func (uc *userController) GetUsers(c Context) error {
 func (uc *userController) GetStatus(c Context) error {
 
 	c.JSON(http.StatusOK, "okie")
-	return nil
+	return errorhandel.NewHTTPError(444, "hello", "hello")
 }
