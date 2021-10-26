@@ -18,6 +18,7 @@ func main() {
 
 	db := datastore.NewDB()
 	db.AutoMigrate(&model.User{})
+	db.AutoMigrate(&model.Brand{})
 	r := registry.NewRegistry(db)
 
 	e := echo.New()
