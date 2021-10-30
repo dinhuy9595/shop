@@ -10,6 +10,5 @@ type User struct {
 	DeletedAt time.Time `json:"deleted_at"`
 	Type uint `json:"type"`
 }
-
 // TableName create name table
 func (User) TableName() string { return "users" }

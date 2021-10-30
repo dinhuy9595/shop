@@ -12,3 +12,6 @@ type Product truct {
 	UpdatedAt time.Time `json:"updated_at"`
 	DeletedAt time.Time `json:"deleted_at"`
 }
+
+// TableName create name table
+func (Product) TableName() string {return "products"}; 
